@@ -29,9 +29,3 @@ export const parseUserInfo = (): any => {
   const userData = JSON.parse(localStorage.getItem("userInfo") as any);
   return userData;
 };
-
-
-
-
-
-
