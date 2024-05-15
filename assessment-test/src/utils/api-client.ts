@@ -1,14 +1,14 @@
 import axios from "axios";
-import config from "@/config";
+import config from "../config";
 //Base APi Url
 const apiUrl = `${config.baseUrl}`;
 
 const axiosApi = axios.create({ baseURL: apiUrl });
 
-import { getAccessToken, removeAccessToken, removeUserInfo } from "@/helpers";
+import { getAccessToken, removeAccessToken, removeUserInfo } from "../helpers";
 
-import StyledAlert from "@/components/reusables/StyledAlert";
-import { Config, Get, Post, Put, Del, Patch } from "@/types/http";
+import StyledAlert from "../components/reusables/StyledAlert";
+import { Config, Get, Post, Put, Del, Patch } from "../types/http";
 
 const setConfigs = (config: Config) => {
   const { token } = { token: getAccessToken() };

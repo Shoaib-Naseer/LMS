@@ -20,7 +20,7 @@ router.beforeEach((to, from, next) => {
   const nonAuthPagesNames = ["Login"];
 
   if (!isAuthenticated && !nonAuthPagesNames.includes(to.name as any)) {
-    router.replace({ name: "Login" });
+    router.replace({ name: "login" });
   } else if (isAuthenticated && nonAuthPagesNames.includes(to.name as any)) {
     next({ path: "/home" });
   } else if (isAuthenticated && to.path === "/") {
