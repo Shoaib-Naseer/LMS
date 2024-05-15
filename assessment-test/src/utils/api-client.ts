@@ -12,7 +12,7 @@ import { Config, Get, Post, Put, Del, Patch } from "../types/http";
 
 const setConfigs = (config: Config) => {
   const { token } = { token: getAccessToken() };
-  const obj = { ...config, headers: { ...config.headers, authorization: `${token}` } };
+  const obj = { ...config, headers: { ...config.headers, authorization: `Bearer ${token}` } };
   return obj;
 };
 

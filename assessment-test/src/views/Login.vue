@@ -70,8 +70,8 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import Loader from "../components/icons/Loader.vue";
-import { userLogin } from "../services/auth";
-import { setAccessToken, setUserInfo } from "../helpers";
+import { userLogin } from "../services/auth.services";
+import { setAccessToken } from "../helpers";
 import { useUserStore } from "../stores/user";
 
 //=============== Variables =================
@@ -126,3 +126,4 @@ const validateUserName = (minLength = 4) => {
   return true;
 };
 </script>
+../services/auth.services
