@@ -2,17 +2,17 @@
   <main class="min-h-screen flex flex-col gap-2 bg-gray-50 pt-10">
     <!-- top section -->
     <section class="flex gap-6 mx-8 min-w-1/2 min-h-[50vh]">
-      <div class="w-1/2 rounded-lg bg-white p-6 flex flex-col gap-4">
+      <div class="md:w-1/2 rounded-lg bg-white p-6 flex flex-col gap-4">
         <h1 class="text-lg font-semibold">Date</h1>
         <VueDatePicker v-model="date" />
       </div>
-      <div class="w-1/2 rounded-lg bg-gray-200"></div>
+      <div class="w-1/2 rounded-lg bg-gray-200 hidden md:block"></div>
     </section>
 
     <h2 class="mx-8 text-md my-6">Schools</h2>
 
     <!-- bottom section -->
-    <section class="flex gap-4 mx-8 max-w-full relative">
+    <section class="flex flex-col md:flex-row gap-4 mx-8 max-w-full relative">
       <div class="bg-white px-6 rounded-lg cursor-pointer flex items-start justify-between flex-1 pt-6 pb-12">
         <div class="flex flex-col gap-2 font-semibold">
           <h3>Total</h3>
