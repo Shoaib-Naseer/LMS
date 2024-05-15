@@ -72,8 +72,10 @@ import { ref } from "vue";
 import Loader from "../components/icons/Loader.vue";
 import { userLogin } from "../services/auth";
 import { setAccessToken, setUserInfo } from "../helpers";
+import { useUserStore } from "../stores/user";
 
 //=============== Variables =================
+const { setUserDetails } = useUserStore();
 
 const username = ref("");
 const password = ref("");
@@ -110,8 +112,8 @@ const login = async () => {
   // Storing User Data in LocalStorage
   const { email, firstName, lastName, username: userName, _id: id, role } = data.user;
   const userObj = { email, firstName, lastName, userName, id, role };
-
-  setUserInfo(userObj);
+  // Store User Info in Pinia state and local storage as well
+  setUserDetails(userObj);
 
   state.value.isLoading = false;
 };
