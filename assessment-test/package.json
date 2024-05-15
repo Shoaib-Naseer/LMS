@@ -12,6 +12,7 @@
     "format": "prettier .  --write"
   },
   "dependencies": {
+    "@vuepic/vue-datepicker": "^8.6.0",
     "axios": "^1.6.8",
     "oh-vue-icons": "^1.0.0-rc3",
     "pinia": "^2.1.7",

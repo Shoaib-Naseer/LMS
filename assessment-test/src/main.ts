@@ -8,8 +8,16 @@ import { OhVueIcon, addIcons } from "oh-vue-icons";
 
 import router from "./router";
 
-import { BiEye, BiEyeSlash } from "oh-vue-icons/icons";
+import {
+  BiEye,
+  BiEyeSlash,
+  BiCart3,
+  OiLocation,
+  CoEnvelopeLetter,
+  BiChat,
+  IoSettingsOutline,
+} from "oh-vue-icons/icons";
 
-addIcons(BiEye, BiEyeSlash);
+addIcons(BiEye, BiEyeSlash, BiCart3, OiLocation, CoEnvelopeLetter, BiChat, IoSettingsOutline);
 
 createApp(App).use(router).use(createPinia()).component("VIcon", OhVueIcon).mount("#app");

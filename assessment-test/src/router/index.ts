@@ -25,20 +25,20 @@ const router = createRouter({
   routes,
 });
 
-router.beforeEach((to, from, next) => {
-  const isAuthenticated = getAccessToken() || false;
+// router.beforeEach((to, from, next) => {
+//   const isAuthenticated = getAccessToken() || false;
 
-  const nonAuthPagesNames = ["Login"];
+//   const nonAuthPagesNames = ["Login"];
 
-  if (!isAuthenticated && !nonAuthPagesNames.includes(to.name as any)) {
-    router.replace({ name: "Login" });
-  } else if (isAuthenticated && nonAuthPagesNames.includes(to.name as any)) {
-    next({ path: "/home" });
-  } else if (isAuthenticated && to.path === "/") {
-    next({ path: "/home" });
-  } else {
-    next();
-  }
-});
+//   if (!isAuthenticated && !nonAuthPagesNames.includes(to.name as any)) {
+//     router.replace({ name: "Login" });
+//   } else if (isAuthenticated && nonAuthPagesNames.includes(to.name as any)) {
+//     next({ path: "/home" });
+//   } else if (isAuthenticated && to.path === "/") {
+//     next({ path: "/home" });
+//   } else {
+//     next();
+//   }
+// });
 
 export default router;
